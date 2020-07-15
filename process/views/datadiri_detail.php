@@ -39,91 +39,104 @@
                   $tampil="select * from user where username='".$_GET['username']."'";
                   $query=mysql_query($tampil) or die ("gagal".mysql_error());
                   $row=mysql_fetch_assoc($query);
-                  
               ?>
               <form class="form-horizontal" action="../controller/simpandatadiri.php" method="POST">
                 <div class="box-body">
+                  <div class="form-group" hidden>
+                    <label for="inputEmail3" class="col-sm-3 control-label">Username</label>
+
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="inputEmail3" placeholder="Username Akun" name="username" value="<?php echo $row['username'];?>" required>
+                    </div>
+                  </div>
+                  <div class="form-group" hidden>
+                    <label for="inputEmail3" class="col-sm-3 control-label">Password</label>
+
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="inputEmail3" placeholder="Ubah Password" name="password" value="<?php echo $row['password'];?>" required>
+                    </div>
+                  </div>
                   <div class="form-group">
                     <label for="inputEmail3" class="col-sm-3 control-label">NIK</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="inputEmail3" placeholder="NIK KTP" name="nik" value="<?php echo $row['nik_ktp'];?>">
+                      <input type="text" class="form-control" id="inputEmail3" placeholder="NIK KTP" name="nik" value="<?php echo $row['nik_ktp'];?>" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputEmail3" class="col-sm-3 control-label">Tanggal Lahir</label>
 
                     <div class="col-sm-9">
-                      <input type="date" class="form-control" id="inputEmail3" placeholder="Tanggal Lahir" name="tgllahir" value="<?php echo $row['tgl_lahir'];?>">
+                      <input type="text" class="form-control" id="inputEmail3" placeholder="Tanggal Lahir" name="tgllahir" value="<?php echo $row['tgl_lahir'];?>" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword3" class="col-sm-3 control-label">Nama Lengkap</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="inputPassword3" placeholder="Nama Lengkap" name="nama" value="<?php echo $row['nama_lengkap'];?>">
+                      <input type="text" class="form-control" id="inputPassword3" placeholder="Nama Lengkap" name="nama" value="<?php echo $row['nama_lengkap'];?>" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword3" class="col-sm-3 control-label">Alamat</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="inputPassword3" placeholder="Alamat Lengkap" name="alamat" value="<?php echo $row['alamat'];?>">
+                      <input type="text" class="form-control" id="inputPassword3" placeholder="Alamat Lengkap" name="alamat" value="<?php echo $row['alamat'];?>" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword3" class="col-sm-3 control-label">No. Kartu Keluarga</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="inputPassword3" placeholder="Nomor Kartu Keluarga" name="nokk" value="<?php echo $row['no_kk'];?>">
+                      <input type="text" class="form-control" id="inputPassword3" placeholder="Nomor Kartu Keluarga" name="nokk" value="<?php echo $row['no_kk'];?>" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword3" class="col-sm-3 control-label">No. HP</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="inputPassword3" placeholder="Nomor HP" name="nohp" value="<?php echo $row['no_hp'];?>">
+                      <input type="text" class="form-control" id="inputPassword3" placeholder="Nomor HP" name="nohp" value="<?php echo $row['no_hp'];?>" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword3" class="col-sm-3 control-label">Email</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="inputPassword3" placeholder="Alamat email" name="email" value="<?php echo $row['email'];?>">
+                      <input type="email" class="form-control" id="inputPassword3" placeholder="Alamat email" name="email" value="<?php echo $row['email'];?>" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword3" class="col-sm-3 control-label">Bangsa</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="inputPassword3" placeholder="Bangsa" name="bangsa" value="<?php echo $row['bangsa'];?>">
+                      <input type="text" class="form-control" id="inputPassword3" placeholder="Bangsa" name="bangsa" value="<?php echo $row['bangsa'];?>" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword3" class="col-sm-3 control-label">Agama</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="inputPassword3" placeholder="Alamat Lengkap" name="agama" value="<?php echo $row['agama'];?>">
+                      <input type="text" class="form-control" id="inputPassword3" placeholder="Alamat Lengkap" name="agama" value="<?php echo $row['agama'];?>" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword3" class="col-sm-3 control-label">Tempat Lahir</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="inputPassword3" placeholder="Tempat Lahir" name="tempat_lahir" value="<?php echo $row['tempat_lahir'];?>">
+                      <input type="text" class="form-control" id="inputPassword3" placeholder="Tempat Lahir" name="tempat_lahir" value="<?php echo $row['tempat_lahir'];?>" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword3" class="col-sm-3 control-label">Jenis Kelamin</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="inputPassword3" placeholder="Jenis Kelamin" name="jkel" value="<?php echo $row['jkel'];?>">
+                      <input type="text" class="form-control" id="inputPassword3" placeholder="Jenis Kelamin" name="jkel" value="<?php echo $row['jkel'];?>" required>
                     </div>
                   </div>
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
-                  <button type="submit" class="btn btn-default">Cancel</button>
+                  <button type="button" class="btn btn-default" onclick="self.history.back()">Cancel</button>
                   <button type="submit" class="btn btn-info pull-right">Simpan</button>
                 </div>
                 <!-- /.box-footer -->

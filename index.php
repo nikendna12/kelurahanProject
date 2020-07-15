@@ -74,37 +74,37 @@
         <div class="carousel-inner" role="listbox">
 
           <div class="carousel-item active">
-            <div class="carousel-background"><img src="img/new/1.jpg" alt=""></div>
+            <div class="carousel-background"><img src="img/new/slide1.jpg" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Website ini khusus untuk pengajuan ....</h2>
+                <h2>Website ini khusus untuk pengajuan Surat Keterangan Usaha (SKU)</h2>
               </div>
             </div>
           </div>
 
           <div class="carousel-item">
-            <div class="carousel-background"><img src="img/new/2.jpg" alt=""></div>
+            <div class="carousel-background"><img src="img/new/slide4.jpg" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Melayani dengan sepenuh hati</h2>
+                <h2>SKU biasanya digunakan sebagai salah satu persyaratan administrasi untuk mengajukan pinjaman ke bank atau lembaga keuangan lainnya misalnya untuk keperluan mengembangkan usaha</h2>
               </div>
             </div>
           </div>
 
           <div class="carousel-item">
-            <div class="carousel-background"><img src="img/new/3.jpg" alt=""></div>
+            <div class="carousel-background"><img src="img/new/slide3.jpg" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Ramah Senyum</h2>
+                <h2>Sebelum mengajukan SKU, pastikan Anda menyiapkan semua dokumen yang diperlukan untuk mengajukan SKU. Masa berlaku SKU adalah 3 bulan dan setelah masa berlaku habis, harus melakukan pengajuan ulang</h2>
               </div>
             </div>
           </div>
 
           <div class="carousel-item">
-            <div class="carousel-background"><img src="img/intro-carousel/4.jpg" alt=""></div>
+            <div class="carousel-background"><img src="img/new/slide2.jpg" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Memberikan yang terbaik</h2>
+                <h2>Sebelum mengajukan SKU, pastikan tempat usaha Anda berada di wilayah Kelurahan Karawaci Baru dan bukan berada di Tanah Fasilitas Sosial dan Fasilitas Umum Kota Tangerang serta tidak berada di atas saluran air</h2>
               </div>
             </div>
           </div>
@@ -142,9 +142,9 @@
             <h4 class="title"><a href="">Visi</a></h4>
             <p class="description">
               <b>"TERDEPAN DALAM PELAYANAN PRIMA KEPADA MASYARAKAT DEMI TERWUJUDNYA KECAMATAN INDUSTRI, PERDAGANGAN DAN JASA YANG MAJU SERTA ASRI" .</b>
-              Makna yang terkandung dalam Visi Kecamatan Karawaci tersebut adalah sebagai berikut:
+              Makna yang terkandung dalam Visi Kelurahan Karawaci Baru tersebut adalah sebagai berikut:
               <ul>
-                <li>Mengedepankan profesionalisme yang dilandasi oleh tata nilai sosial dan norma akhlak mulia dalam penyelenggaraan tugas dan fungsi kelembagaan yang berorientasi pada pelayanan public;</li>
+                <li>Mengedepankan profesionalisme yang dilandasi oleh tata nilai sosial dan norma akhlak mulia dalam penyelenggaraan tugas dan fungsi kelembagaan yang berorientasi pada pelayanan publik;</li>
                 <li>Mengedepankan profesionalisme yang dilandasi oleh tata nilai sosial dan norma akhlak mulia dalam pelayanan prima kepada masyarakat.</li>
               </ul>
             </p>
@@ -152,13 +152,13 @@
           <div class="col-lg-6 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
             <h4 class="title"><a href="">Misi</a></h4>
             <p class="description">
-              Kecamatan Karawaci menetapkan Misi Tahun 2014-2018 sebagai berikut:
+              Kelurahan Karawaci Baru menetapkan Misi sebagai berikut:
               <ul>
-                <li>Meningkatkan kinerja aparatur pemerintah kecamatan melalui peningkatan kapasitas kelembagaan dan sumber daya aparatur.</li>
-                <li>Mewujudkan kualitas perencanaan pembangunan, pengendalian, evaluasi dan data/informasi pembangunan kecamatan.</li>
+                <li>Meningkatkan kinerja aparatur pemerintah kelurahan melalui peningkatan kapasitas kelembagaan dan sumber daya aparatur.</li>
+                <li>Mewujudkan kualitas perencanaan pembangunan, pengendalian, evaluasi dan data/informasi pembangunan kelurahan.</li>
                 <li>Mengoptimalkan kewenangan pelayanan publik berbasis teknologi informasi melalui peningkatan kualitas pelayanan administrasi kependudukan dan pencatatan sipil.</li>
                 <li>Mewujudkan upaya pemberdayaan masyarakat, keberdayaan sosial ekonomi serta kelembagaan sosial yang berkualitas.</li>
-                <li>Meninggkatkan keamanan dan ketertiban masyarakat di wilayah kecamatan</li>
+                <li>Meningkatkan keamanan dan ketertiban masyarakat di wilayah Kelurahan</li>
               </ul>
             </p>
           </div>
@@ -179,8 +179,7 @@
               <p >
                 Berikut ini adalah prosedur pembuatan Surat Keterangan Usaha (SKU) secara Online :
                 <ol style="font-size:11px">
-                  <li>Klik Menu Daftar</li>
-                  <li>Isi formulir sesuai dengan identitas dan data diri sebenarnya</li>
+                  <li>Klik Menu Daftar dan isi formulir pendaftaran</li>
                   <li>Login menggunakan username dan password yang telah didaftarkan</li>
                   <li>Untuk melihat atau mengubah data diri klik menu Profil</li>
                   <li>Untuk mengajukan Surat Keterangan Usaha (SKU) klik menu Pengajuan SKU</li>
@@ -196,7 +195,7 @@
           <div class="col-md-8 wow fadeInUp" data-wow-delay="0.1s">
             <div class="about-col">
               <div class="img">
-                <img src="img/about-plan.jpg" alt="" class="img-fluid">
+                <img src="img/new/Alur.png" alt="" class="img-fluid">
               </div>
             </div>
           </div>
@@ -209,9 +208,8 @@
     <!--==========================
       Facts Section
     ============================-->
-    <section id="facts"  class="wow fadeIn">
+    <section id="facts" class="wow fadeIn">
       <div class="container">
-
         <header class="section-header">
           <h3 class="section-title  wow fadeInUp">Daftar Akun</h3>
         </header>
@@ -224,8 +222,8 @@
               </div>
               <div class="panel-body">
                 <p align="justify">
-                Sebelum memasukan data diri Anda pastikan Anda mengisi form disamping terlebih dahulu guna menindaklanjuti pendaftaran program beasiswa. <br><br>
-                Total Potongan Biaya mencapai <strong>60% .</strong>
+                Silakan melakukan <strong>pendaftaran akun</strong> terlebih dahulu untuk dapat mengajukan <strong>SKU secara online.</strong><br><br>
+                Satu NIK hanya bisa mendaftarkan <strong>satu akun saja.</strong>
               </p>
               </div>
             </div>  
@@ -280,7 +278,7 @@
 
         <div class="section-header">
           <h3>Kontak Kami</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <p>Hubungi Kami untuk pertanyaan terkait prosedur pembuatan Surat Keterangan Usaha (SKU)</p>
         </div>
 
         <div class="row contact-info">
@@ -296,8 +294,8 @@
           <div class="col-md-4">
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
-              <h3>Nomor Telepon</h3>
-              <p><a href="tel:+021-5585268">021-5585268</a></p>
+              <h3>Nomor Kontak</h3>
+              <p><a href="tel:081316301360">081316301360</a></p>
             </div>
           </div>
 
@@ -305,7 +303,7 @@
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:kec.karawaci@tangerangkota.go.id">kec.karawaci@tangerangkota.go.id</a></p>
+              <p><a href="mailto:kec.karawaci@tangerangkota.go.id">kel.karawacibaru@tangerangkota.go.id</a></p>
             </div>
           </div>
 

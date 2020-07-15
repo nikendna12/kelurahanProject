@@ -53,18 +53,17 @@
                   <tr>
                     <td><?php echo $dt['username']; ?></td>
                     <td><?php echo $dt['nama_lengkap']; ?></td>
-                    <td><?php if($dt['status_verifikasi']== 0) { echo "Belum"; } else { echo "SUDAH"; } ?></td>
+                    <td><?php if($dt['status_verifikasi']== 0) { echo "BELUM"; } else { echo "SUDAH"; } ?></td>
                     <td>
                         <?php
                           if($dt['status_verifikasi']== 0){
                         ?>
                             <div class="btn-group">
-                              <input type="button" class="btn btn-success" name="submit" value="Lengkapi Data Siswa" onclick="window.location='datadiri_detail.php?username=<?=$dt['username'];?>' ">
+                              <input type="button" class="btn btn-success" name="submit" value="Lengkapi Data Diri" onclick="window.location='datadiri_detail.php?username=<?=$dt['username'];?>' ">
                             </div>
                         <?php } else { ?>
                             <div class="btn-group">
-                              <input type="button" class="btn btn-primary" name="submit" value="Cek Data Siswa" onclick="window.location='datadiri_detail.php?username=<?=$dt['username'];?>' ">
-                              <a class="btn btn-default" name="btnCetak" href="cetak/f_biodata.php" target="_blank">Cetak</a>
+                              <input type="button" class="btn btn-primary" name="submit" value="Cek Data Diri" onclick="window.location='datadiri_detail.php?username=<?=$dt['username'];?>' ">
                             </div>
                         <?php } ?>
 
