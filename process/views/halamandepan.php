@@ -28,9 +28,8 @@
 
     <section class="content">
       <div class="row">
-        
         <section class="col-lg-5 connectedSortable">
-          ini ini
+          <img src="../../img/new/1.jpg" alt="kelurahan" width="800" height="500">
           
         </section>
         <!-- right col -->

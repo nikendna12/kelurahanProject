@@ -32,21 +32,20 @@
           <?php 
             $sql1 = mysql_query("SELECT * FROM dokumen, user
                                 WHERE dokumen.id_user = user.id_user
-                                AND dokumen.jenis_dok = 'lokusaha'
                                 AND dokumen.id_user = '" . $_SESSION['id_user'] . "'");
 
             $r=mysql_fetch_assoc($sql1);
           ?>
 
-          <form role="form" name="form1" action="../controller/unggah_dok.php?jenis=<?php echo "lokusaha"; ?>" method="post" enctype="multipart/form-data">
+          <form role="form" name="form1" action="../controller/unggah_lokusaha.php" method="post" enctype="multipart/form-data">
             <div class="row">
               <div class="col-sm-12">
                 <div class="panel panel-default">
-                  <div class="panel-heading">Ubah Dokumen Lokasi Usaha</div>
+                  <div class="panel-heading">Ubah Dokumen Foto Lokasi Usaha</div>
                   <div class="panel-body">
                     <?php
-                      if ($r['pic_dok']!=''){   
-                        echo "<p align = center><img class='img-responsive' id='target' src='../dist/img/abc/$r[pic_dok]' oncontextmenu='return false;'></p>";
+                      if ($r['lokusaha']!=''){   
+                        echo "<p align = center><img class='img-responsive' id='target' src='../dist/img/abc/$r[lokusaha]' oncontextmenu='return false;'></p>";
                       } else {
                         echo "<p align = center><img class='img-responsive' id='target' src='../dist/img/image_not_available.jpg' oncontextmenu='return false;'></p>";
                       }
@@ -55,7 +54,7 @@
                     <div><br></div>
                     <div class="form-group">
                       <label>Pilih dokumen</label>
-                      <input type="file" id="src" name="fupload_ktp" />
+                      <input type="file" id="src" name="fupload_lokusaha" />
                       <p class="help-block">File dokumen harus bertipe *.jpeg, *.jpg, atau *.png</p>
                     </div>
                     <div class="box-footer">

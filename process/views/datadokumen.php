@@ -34,7 +34,7 @@
             <div class="color-palette-set">
               <div class="bg-maroon-active color-palette">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Data Pengaju</h3>
+                  <h3 class="panel-title">Data Dokumen Pengaju</h3>
                 </div>
               </div>
             </div>
@@ -47,13 +47,18 @@
                       <th>#</th>
                       <th>Username</th>
                       <th>Nama Lengkap</th>                      
-                      <th>NIK KTP</th>                      
-                      <th>Alamat Rumah</th>
-                      <th align="center">Aksi</th>
+                      <th>Tanggal Upload</th>                      
+                      <th>KTP</th>
+                      <th>Kartu Keluarga</th>
+                      <th>Lokasi Usaha</th>
+                      <th>Surat Pengantar</th>
+                      <th>Surat Pernyataan</th>
+                      <th>Aksi</th>
                     </tr>
                     </thead>
                     <?php
-                        $sql = mysql_query("SELECT * FROM user WHERE level = 2 AND status_verifikasi != 0 ");
+                        $sql = mysql_query("SELECT * FROM user LEFT JOIN dokumen 
+                        ON user.id_user=dokumen.id_user WHERE user.status_verifikasi != 0 ");
                         $no = 1;
                         while($r = mysql_fetch_array($sql)){
                     ?>
@@ -62,18 +67,15 @@
                       <td style="display:none;"><?php echo $r['id_user']; ?></td>
                       <td><?php echo $r['username']; ?></td>
                       <td><?php echo $r['nama_lengkap']; ?></td>
-                      <td><?php echo $r['nik_ktp']; ?></td>
-                      <td><?php echo $r['alamat']; ?></td>
-                      <td align="center">
-                        <div class="btn-group">
-                          <input type="button" class="btn btn-success" name="submit" value="Detail" onclick="window.location='datapengaju_detail.php?tid=<?php echo $r['id_user'];?>&uname=<?php echo $r['username'];?>' ">
-                          <?php if($r['status_verifikasi'] < 2) { ?>
-                            <input type="button" class="btn btn-danger" name="submit" value="Belum Terkonfirmasi" disabled>
-                          <?php } else { ?>
-                            <input type="button" class="btn btn-success" name="submit" value="Sudah Terkonfirmasi" disabled>
-                          <?php } ?>
-                        </div>
-                      </td>
+                      <td><?php echo $r['tgl_upload']; ?></td>
+                      <td><input type="button" class="btn btn-success" name="submit" value="Lihat"></td>
+                      <td><input type="button" class="btn btn-success" name="submit" value="Lihat"></td>
+                      <td><input type="button" class="btn btn-success" name="submit" value="Lihat"></td>
+                      <td><input type="button" class="btn btn-success" name="submit" value="Lihat"></td>
+                      <td><input type="button" class="btn btn-success" name="submit" value="Lihat"></td>
+                      <td><input type="button" class="btn btn-success" name="submit" value="Konfirmasi">
+                      <input type="button" class="btn btn-danger" name="submit" value="Reject"></td>
+
                     </tr>               
                     <?php $no++; } ?>  
                   </table>

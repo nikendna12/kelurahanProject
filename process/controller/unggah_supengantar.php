@@ -4,17 +4,16 @@ include "koneksi.php";
 
 // Lokasi folder foto yang diupload
 $destination_file = '../dist/img/abc/';
-$jenis = $_GET['jenis'];
 
 	/*--------------- script cegah upload file shell.php via *.jpg -------------*/
-	if(isset($_FILES['fupload_ktp'])){
+	if(isset($_FILES['fupload_supengantar'])){
 	
 
 		// Ambil beberapa informasi tentang si foto
-		$lokasi_file = $_FILES['fupload_ktp']['tmp_name'];
-		$tipe_file = $_FILES['fupload_ktp']['type'];
-		$nama_file = $_FILES['fupload_ktp']['name'];
-		$file_size = $_FILES['fupload_ktp']['size'];
+		$lokasi_file = $_FILES['fupload_supengantar']['tmp_name'];
+		$tipe_file = $_FILES['fupload_supengantar']['type'];
+		$nama_file = $_FILES['fupload_supengantar']['name'];
+		$file_size = $_FILES['fupload_supengantar']['size'];
 
 		// cek ukuran file gambar, tidak boleh lebbih dari 2mb
 		if ($file_size > 2048000) {
@@ -53,7 +52,7 @@ $jenis = $_GET['jenis'];
 			$expensions = array("jpeg","jpg","pjpeg","png","gif");
 
 			if(in_array($file_ext,$expensions)== false){
-				echo "<script>window.alert('Upload dokumen kartu keluarga gagal, pastikan file yang di upload bertipe *.JPG, *.PNG, *.GIF');
+				echo "<script>window.alert('Upload dokumen surat pengantar gagal, pastikan file yang di upload bertipe *.JPG, *.PNG, *.GIF');
 					history.go(-1);
 					</script>
 					";
@@ -65,22 +64,21 @@ $jenis = $_GET['jenis'];
 			else {				
 
 				/* versi PDO */
-				$data_gbr = mysql_query("SELECT pic_dok FROM dokumen 
-											WHERE jenis_dok = '$jenis' 
-											AND id_user = '" . $_SESSION['id_user'] . "'");
+				$data_gbr = mysql_query("SELECT supengantar FROM dokumen 
+											WHERE id_user = '" . $_SESSION['id_user'] . "'");
 				$countData = mysql_num_rows($data_gbr);
 				$r = mysql_fetch_assoc($data_gbr);
 					
 				// Upload file terlebih dahulu
-  				move_uploaded_file($_FILES["fupload_ktp"]["tmp_name"], $destination_file . $nama_file_unik);
+  				move_uploaded_file($_FILES["fupload_supengantar"]["tmp_name"], $destination_file . $nama_file_unik);
 
   				// cek if row kk by no regis sekarang sdah ada, jika iya update data dan delete photo sebelumnya
 				if ($countData > 0) {
 
 					// hapus file sebelumnya
-					@unlink('../dist/img/abc/'.$r['pic_dok']); // delete file
+					@unlink('../dist/img/abc/'.$r['supengantar']); // delete file
 				
-					$sql = mysql_query("UPDATE dokumen SET pic_dok = '$nama_file_unik' WHERE jenis_dok = '$jenis' AND id_user = '" . $_SESSION['id_user'] . "'");
+					$sql = mysql_query("UPDATE dokumen SET supengantar = '$nama_file_unik' WHERE id_user = '" . $_SESSION['id_user'] . "'");
 
 					echo 
 					"
@@ -90,13 +88,13 @@ $jenis = $_GET['jenis'];
 					</pre>
 
 					<script>
-						alert('Data dokumen kartu keluarga telah diupdate.');
+						alert('Data dokumen Surat Pengantar telah diupdate.');
 						history.go(-2);
 					</script>";
 
 				}
 				else {
-					$sql = mysql_query("INSERT INTO dokumen(id_user,jenis_dok,tgl_upload,pic_dok) VALUES ('" . $_SESSION['id_user'] . "','$jenis','".date("Y-m-d")."','$nama_file_unik')");
+					$sql = mysql_query("INSERT INTO dokumen(id_user,supengantar,tgl_upload) VALUES ('" . $_SESSION['id_user'] . "','$nama_file_unik','".date("Y-m-d")."')");
 
 					echo 
 					"
@@ -106,7 +104,7 @@ $jenis = $_GET['jenis'];
 					</pre>
 
 					<script>
-						alert('Data dokumen kartu keluarga telah ditambahkan.');
+						alert('Data dokumen Surat Pengantar telah ditambahkan.');
 						history.go(-2);
 					</script>";
 				}

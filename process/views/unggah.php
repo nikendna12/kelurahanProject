@@ -37,18 +37,17 @@
               <?php
                     $sql1 = mysql_query("SELECT * FROM dokumen, user
                                         WHERE dokumen.id_user = user.id_user
-                                        AND dokumen.jenis_dok = 'ktp'
                                         AND dokumen.id_user = '" . $_SESSION['id_user'] . "'");
 
                     $r1=mysql_fetch_assoc($sql1);
 
-                  if ($r1['pic_dok']!=''){   
-                    echo "<p align=center><img class='img-responsive' src='../dist/img/abc/$r1[pic_dok]' oncontextmenu='return false;'></p>";
+                  if ($r1['ktp']!=''){   
+                    echo "<p align=center><img class='img-responsive' src='../dist/img/abc/$r1[ktp]' oncontextmenu='return false;'></p>";
                   } else {
                     echo "<p align=center><img class='img-responsive' src='../dist/img/image_not_available.jpg' oncontextmenu='return false;'></p>";
                   }
 
-                  if ($r1['pic_dok'] != ''){
+                  if ($r1['ktp'] != ''){
                 ?>
                 <div class="text-center"><button type="button" class="btn btn-success" name="submit" onclick="window.location='ubah_ktp.php'">Ubah KTP</button></div>
                 <?php } else { ?>
@@ -67,18 +66,17 @@
             <?php
                 $sql1 = mysql_query("SELECT * FROM dokumen, user
                                     WHERE dokumen.id_user = user.id_user
-                                    AND dokumen.jenis_dok = 'kk'
                                     AND dokumen.id_user = '" . $_SESSION['id_user'] . "'");
 
                 $r1=mysql_fetch_assoc($sql1);
 
-              if ($r1['pic_dok']!=''){   
-                echo "<p align=center><img class='img-responsive' src='../dist/img/abc/$r1[pic_dok]' oncontextmenu='return false;'></p>";
+              if ($r1['kk']!=''){   
+                echo "<p align=center><img class='img-responsive' src='../dist/img/abc/$r1[kk]' oncontextmenu='return false;'></p>";
               } else {
                 echo "<p align=center><img class='img-responsive' src='../dist/img/image_not_available.jpg' oncontextmenu='return false;'></p>";
               }
 
-              if ($r1['pic_dok'] != ''){
+              if ($r1['kk'] != ''){
             ?>
                 <div class="text-center"><button type="button" class="btn btn-success" name="submit" onclick="window.location='ubah_kk.php'">Ubah Kartu Keluarga</button></div>
               <?php } else { ?>
@@ -96,18 +94,17 @@
             <?php
                 $sql1 = mysql_query("SELECT * FROM dokumen, user
                                     WHERE dokumen.id_user = user.id_user
-                                    AND dokumen.jenis_dok = 'lokusaha'
                                     AND dokumen.id_user = '" . $_SESSION['id_user'] . "'");
 
                 $r1=mysql_fetch_assoc($sql1);
 
-              if ($r1['pic_dok']!=''){   
-                echo "<p align=center><img class='img-responsive' src='../dist/img/abc/$r1[pic_dok]' oncontextmenu='return false;'></p>";
+              if ($r1['lokusaha']!=''){   
+                echo "<p align=center><img class='img-responsive' src='../dist/img/abc/$r1[lokusaha]' oncontextmenu='return false;'></p>";
               } else {
-                echo "<p align=center><img class='img-responsive' src='../dist/img/$r1[pic_dok]image_not_available.jpg' oncontextmenu='return false;'></p>";
+                echo "<p align=center><img class='img-responsive' src='../dist/img/image_not_available.jpg' oncontextmenu='return false;'></p>";
               }
 
-              if ($r1['pic_dok'] != ''){
+              if ($r1['lokusaha'] != ''){
             ?>
                 <div class="text-center"><button type="button" class="btn btn-success" name="submit" onclick="window.location='ubah_lokusaha.php'">Ubah Foto Lokasi Usaha</button></div>
               <?php } else { ?>
@@ -125,18 +122,17 @@
             <?php
                 $sql1 = mysql_query("SELECT * FROM dokumen, user
                                     WHERE dokumen.id_user = user.id_user
-                                    AND dokumen.jenis_dok = 'supernyataan'
                                     AND dokumen.id_user = '" . $_SESSION['id_user'] . "'");
 
                 $r1=mysql_fetch_assoc($sql1);
 
-              if ($r1['pic_dok']!=''){   
-                echo "<p align=center><img class='img-responsive' src='../dist/img/abc/$r1[pic_dok]' oncontextmenu='return false;'></p>";
+              if ($r1['supernyataan']!=''){   
+                echo "<p align=center><img class='img-responsive' src='../dist/img/abc/$r1[supernyataan]' oncontextmenu='return false;'></p>";
               } else {
-                echo "<p align=center><img class='img-responsive' src='../dist/img/$r1[pic_dok]image_not_available.jpg' oncontextmenu='return false;'></p>";
+                echo "<p align=center><img class='img-responsive' src='../dist/img/image_not_available.jpg' oncontextmenu='return false;'></p>";
               }
 
-              if ($r1['pic_dok'] != ''){
+              if ($r1['supernyataan'] != ''){
             ?>
                 <div class="text-center"><button type="button" class="btn btn-success" name="submit" onclick="window.location='ubah_supernyataan.php'">Ubah Surat Pernyataan</button></div>
               <?php } else { ?>
@@ -154,18 +150,17 @@
             <?php
                 $sql1 = mysql_query("SELECT * FROM dokumen, user
                                     WHERE dokumen.id_user = user.id_user
-                                    AND dokumen.jenis_dok = 'supengantar'
                                     AND dokumen.id_user = '" . $_SESSION['id_user'] . "'");
 
                 $r1=mysql_fetch_assoc($sql1);
 
-                if ($r1['pic_dok']!=''){   
-                  echo "<p align=center><img class='img-responsive' src='../dist/img/abc/$r1[pic_dok]' oncontextmenu='return false;'></p>";
+                if ($r1['supengantar']!=''){   
+                  echo "<p align=center><img class='img-responsive' src='../dist/img/abc/$r1[supengantar]' oncontextmenu='return false;'></p>";
                 } else {
-                  echo "<p align=center><img class='img-responsive' src='../dist/img/$r1[pic_dok]image_not_available.jpg' oncontextmenu='return false;'></p>";
+                  echo "<p align=center><img class='img-responsive' src='../dist/img/image_not_available.jpg' oncontextmenu='return false;'></p>";
                 }
 
-                if ($r1['pic_dok'] != ''){
+                if ($r1['supengantar'] != ''){
               ?>
                 <div class="text-center"><button type="button" class="btn btn-success" name="submit" onclick="window.location='ubah_supengantar.php'">Ubah Surat Pengantar</button></div>
               <?php } else { ?>

@@ -50,13 +50,6 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-3 control-label">Masa Berlaku</label>
-
-                    <div class="col-sm-9">
-                      <input type="text" class="form-control" id="inputPassword3" placeholder="Masa Berlaku" name="masaberlaku" required>
-                    </div>
-                  </div>
-                  <div class="form-group">
                     <label for="inputPassword3" class="col-sm-3 control-label">Alasan Mengajukan</label>
 
                     <div class="col-sm-9">

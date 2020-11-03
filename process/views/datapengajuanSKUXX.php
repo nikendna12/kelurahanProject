@@ -34,7 +34,7 @@
             <div class="color-palette-set">
               <div class="bg-maroon-active color-palette">
                 <div class="panel-heading">
-                  <h3 class="panel-title">Data Pengaju</h3>
+                  <h3 class="panel-title">Data Pengajuan</h3>
                 </div>
               </div>
             </div>
@@ -45,33 +45,32 @@
                     <thead>
                     <tr>
                       <th>#</th>
-                      <th>Username</th>
-                      <th>Nama Lengkap</th>                      
-                      <th>NIK KTP</th>                      
-                      <th>Alamat Rumah</th>
+                      <th>Nama Lengkap</th>
+                      <th>Nama Usaha</th>                      
+                      <th>Alamat Usaha</th>                      
+                      <th>Tanggal Berlaku</th>
                       <th align="center">Aksi</th>
                     </tr>
                     </thead>
                     <?php
-                        $sql = mysql_query("SELECT * FROM user WHERE level = 2 AND status_verifikasi != 0 ");
+                        $sql = mysql_query("SELECT * FROM pengajuan");
                         $no = 1;
                         while($r = mysql_fetch_array($sql)){
                     ?>
                     <tr>
                       <td><?php echo $no; ?></td>
-                      <td style="display:none;"><?php echo $r['id_user']; ?></td>
+                      <td style="display:none;"><?php echo $r['id_pengajuan']; ?></td>
                       <td><?php echo $r['username']; ?></td>
-                      <td><?php echo $r['nama_lengkap']; ?></td>
-                      <td><?php echo $r['nik_ktp']; ?></td>
-                      <td><?php echo $r['alamat']; ?></td>
+                      <td><?php echo $r['nama_usaha']; ?></td>
+                      <td><?php echo $r['alamat_usaha']; ?></td>
+                      <td><?php echo $r['masa_berlaku']; ?></td>
+                      
                       <td align="center">
                         <div class="btn-group">
-                          <input type="button" class="btn btn-success" name="submit" value="Detail" onclick="window.location='datapengaju_detail.php?tid=<?php echo $r['id_user'];?>&uname=<?php echo $r['username'];?>' ">
-                          <?php if($r['status_verifikasi'] < 2) { ?>
-                            <input type="button" class="btn btn-danger" name="submit" value="Belum Terkonfirmasi" disabled>
-                          <?php } else { ?>
-                            <input type="button" class="btn btn-success" name="submit" value="Sudah Terkonfirmasi" disabled>
-                          <?php } ?>
+                          <input type="button" class="btn btn-success" name="submit" value="Profil" onclick="window.location='datapengaju_detail.php?tid=<?php echo $r['id_pengajuan'];?>&uname=<?php echo $r['username'];?>' ">
+                          <input type="button" class="btn btn-success" name="submit" value="Dokumen" onclick="window.location='datalolos_detail.php?tid=<?php echo $r['noregis'];?>&tes=<?php echo $n_tes;?>&rpt=<?php echo $n_raport;?>&sert=<?php echo $n_sertifikat;?>' ">
+                          <input type="button" class="btn btn-success" name="submit" value="Konfirmasi" onclick="window.location='datalolos_detail.php?tid=<?php echo $r['noregis'];?>&tes=<?php echo $n_tes;?>&rpt=<?php echo $n_raport;?>&sert=<?php echo $n_sertifikat;?>' ">
+                          
                         </div>
                       </td>
                     </tr>               

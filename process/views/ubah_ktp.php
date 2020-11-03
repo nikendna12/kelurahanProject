@@ -32,21 +32,20 @@
           <?php 
             $sql1 = mysql_query("SELECT * FROM dokumen, user
                                 WHERE dokumen.id_user = user.id_user
-                                AND dokumen.jenis_dok = 'ktp'
                                 AND dokumen.id_user = '" . $_SESSION['id_user'] . "'");
 
             $r=mysql_fetch_assoc($sql1);
           ?>
 
-          <form role="form" name="form1" action="../controller/unggah_dok.php?jenis=<?php echo "ktp"; ?>" method="post" enctype="multipart/form-data">
+          <form role="form" name="form1" action="../controller/unggah_ktp.php" method="post" enctype="multipart/form-data">
             <div class="row">
               <div class="col-sm-12">
                 <div class="panel panel-default">
                   <div class="panel-heading">Ubah Dokumen KTP Diri</div>
                   <div class="panel-body">
                     <?php
-                      if ($r['pic_dok']!=''){   
-                        echo "<p align = center><img class='img-responsive' id='target' src='../dist/img/abc/$r[pic_dok]' oncontextmenu='return false;'></p>";
+                      if ($r['ktp']!=''){   
+                        echo "<p align = center><img class='img-responsive' id='target' src='../dist/img/abc/$r[ktp]' oncontextmenu='return false;'></p>";
                       } else {
                         echo "<p align = center><img class='img-responsive' id='target' src='../dist/img/image_not_available.jpg' oncontextmenu='return false;'></p>";
                       }

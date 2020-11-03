@@ -48,14 +48,28 @@
               <ol>
                 <li>SKU biasanya digunakan sebagai salah satu persyaratan administrasi untuk mengajukan pinjaman ke bank atau lembaga keuangan lainnya misalnya untuk keperluan mengembangkan usaha</li>
                 <li>Sebelum mengajukan SKU, pastikan Anda menyiapkan semua dokumen yang diperlukan untuk mengajukan SKU. Masa berlaku SKU adalah 3 bulan dan setelah masa berlaku habis, harus melakukan pengajuan ulang</li>
-                <li>Sebelum mengajukan SKU, pastikan Anda menyiapkan semua dokumen yang diperlukan untuk mengajukan SKU. Masa berlaku SKU adalah 3 bulan dan setelah masa berlaku habis, harus melakukan pengajuan ulang</li>
                 <li>Sebelum mengajukan SKU, pastikan tempat usaha Anda berada di wilayah Kelurahan Karawaci Baru dan bukan berada di Tanah Fasilitas Sosial dan Fasilitas Umum Kota Tangerang serta tidak berada di atas saluran air</li>
               </ol>
             </div>
+             
+                      
             <div class="box-footer clearfix">
-              <div class="col-xs-2">
-                <input type="button" class="btn btn-block btn-primary" name="tambah" value="Ajukan" onclick="window.location='pengajuan_detail.php'">
-              </div>
+            <?php
+                $sql1 = mysql_query("SELECT * FROM dokumen
+                                      WHERE id_user = '" . $_SESSION['id_user'] . "' ")or die(mysql_error());
+
+                $data = mysql_fetch_array($sql1);
+                if($data['ktp'] != ""){
+              ?>
+                <div class="col-xs-2">
+                
+                  <input type="button" class="btn btn-block btn-primary" name="tambah" value="Ajukan Usaha Baru" onclick="window.location='pengajuan_tambah.php'">
+                </div>
+              <?php } else { ?>
+                <div class="col-xs-5">
+                  <input type="button" class="btn btn-block btn-warning" name="tambah" value="Harap Lengkapi Data Diri dan Dokumen">
+                </div>
+              <?php } ?>
             </div>
           </div>
           <div class="box">
@@ -64,31 +78,39 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th>Nama Lengkap</th>
+                    <th>#</th>
                     <th>Nama Usaha</th>
                     <th>Alamat</th>
                     <th>Masa Berlaku</th>
                     <th>Alasan Pengajuan</th>
-                    <th></th>
+                    <th>Status</th>
+                    <th>Aksi</th>
                   </tr>
                 </thead>
                 <?php //'
-                    $str="select * from pengajuan where username ='" . $_SESSION['username'] . "'";
-                    $q=mysql_query($str,$conn);
-                    $dt=mysql_fetch_array($q);
+                    $sql = mysql_query("select * from pengajuan where username ='" . $_SESSION['username'] . "'");
+                    $no = 1;
+                    while($r = mysql_fetch_array($sql)){
                 ?>
                 <tbody>
                   <tr>
-                    <td><?php echo $dt['username']; ?></td>
-                    <td><?php echo $dt['nama_usaha']; ?></td>
-                    <td><?php echo $dt['alamat_usaha'] ?></td>
-                    <td><?php echo $dt['masa_berlaku'] ?></td>
-                    <td><?php echo $dt['alasan'] ?></td>
+                    <td><?php echo $no; ?></td>
+                    <td><?php echo $r['nama_usaha']; ?></td>
+                    <td><?php echo $r['alamat_usaha'] ?></td>
+                    <td><?php echo $r['masa_berlaku'] ?></td>
+                    <td><?php echo $r['alasan'] ?></td>
+                    <td >Belum Terkonfirmasi</td>
                     <td>
-
+                        <div class="btn-group">
+                            <input type="button" class="btn btn-default" name="submit" value="Ajukan lagi" onclick="window.location='datadiri_detail.php?username=<?=$r['username'];?>' ">
+                        </div>
+                        <div class="btn-group">
+                            <input type="button" class="btn btn-danger" name="hapus" value="Hapus SKU" onclick="window.location='../controller/hapusSKU.php?tid=<?=$r['id_pengajuan'];?>' ">
+                        </div>
                     </td>
                     <td></td>
                   </tr>
+                  <?php $no++; } ?>
                 </tbody>
               </table>
             </div>

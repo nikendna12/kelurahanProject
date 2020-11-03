@@ -22,7 +22,7 @@ exit();
 
 if($password1==$password2){
 		$simpan=mysql_query("insert into user
-		values('','$user','$password1','$nama','nopict','2')");
+		values('','$user','$password1','$nama','nopict','2','','','','','','','','','','','')");
 
 		if($simpan) 
 		{ 
