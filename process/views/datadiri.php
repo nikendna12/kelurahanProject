@@ -39,7 +39,7 @@
                   <tr>
                     <th>Username</th>
                     <th>Nama</th>
-                    <th>Status Verifikasi</th>
+                    <th>Alamat Rumah</th>
                     <th>Aksi</th>
                     <th></th>
                   </tr>
@@ -53,7 +53,7 @@
                   <tr>
                     <td><?php echo $dt['username']; ?></td>
                     <td><?php echo $dt['nama_lengkap']; ?></td>
-                    <td><?php if($dt['status_verifikasi']== 0) { echo "BELUM"; } else { echo "SUDAH"; } ?></td>
+                    <td><?php echo $dt['alamat']; ?></td>
                     <td>
                         <?php
                           if($dt['status_verifikasi']== 0){

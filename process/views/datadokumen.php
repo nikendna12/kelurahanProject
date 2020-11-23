@@ -6,7 +6,23 @@
     include "../bagan/head.html" ;
     session_start(); 
   ?>
+  <!-- <style>
+    .example-modal .modal {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      right: auto;
+      left: auto;
+      display: block;
+      z-index: 1;
+    }
+
+    .example-modal .modal {
+      background: transparent !important;
+    }
+  </style> -->
 </head>
+
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
   <?php include "../bagan/header.html" ; ?>
@@ -47,13 +63,14 @@
                       <th>#</th>
                       <th>Username</th>
                       <th>Nama Lengkap</th>                      
-                      <th>Tanggal Upload</th>                      
+                      <!-- <th>Tanggal Upload</th>                       -->
                       <th>KTP</th>
                       <th>Kartu Keluarga</th>
                       <th>Lokasi Usaha</th>
                       <th>Surat Pengantar</th>
                       <th>Surat Pernyataan</th>
                       <th>Aksi</th>
+                      <th>Catatan</th>
                     </tr>
                     </thead>
                     <?php
@@ -67,18 +84,38 @@
                       <td style="display:none;"><?php echo $r['id_user']; ?></td>
                       <td><?php echo $r['username']; ?></td>
                       <td><?php echo $r['nama_lengkap']; ?></td>
-                      <td><?php echo $r['tgl_upload']; ?></td>
-                      <td><input type="button" class="btn btn-success" name="submit" value="Lihat"></td>
-                      <td><input type="button" class="btn btn-success" name="submit" value="Lihat"></td>
-                      <td><input type="button" class="btn btn-success" name="submit" value="Lihat"></td>
-                      <td><input type="button" class="btn btn-success" name="submit" value="Lihat"></td>
-                      <td><input type="button" class="btn btn-success" name="submit" value="Lihat"></td>
-                      <td><input type="button" class="btn btn-success" name="submit" value="Konfirmasi">
-                      <input type="button" class="btn btn-danger" name="submit" value="Reject"></td>
-
+                      <!-- <td><?php echo $r['tgl_upload']; ?></td> -->
+                      <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default"><i class="fa fa-search"></i></button></td>
+                      <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default"><i class="fa fa-search"></i></button></td>
+                      <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default"><i class="fa fa-search"></i></button></td>
+                      <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default"><i class="fa fa-search"></i></button></td>
+                      <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default"><i class="fa fa-search"></i></button></td>
+                      <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-default"><i class="fa fa-check"></i></button>
+                      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-default"><i class="fa fa-close"></i></button>
+                      <td><input type="text"/></td>
                     </tr>               
                     <?php $no++; } ?>  
                   </table>
+                </div>
+                <div class="modal fade" id="modal-default">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Default Modal</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p>One fine body&hellip;</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                    <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
                 </div>
                   <!-- /.box-body -->
               </div>

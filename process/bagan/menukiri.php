@@ -10,7 +10,7 @@
       <li><a href="datadiri.php"><i class="fa fa-files-o"></i> <span> Profil Diri</span></a></li>
       <li><a href="unggah.php"><i class="fa fa-files-o"></i> <span> Unggah Dokumen</span></a></li>
       <li><a href="pengajuan.php"><i class="fa fa-files-o"></i> <span> Mengajukan</span></a></li>
-      <li><a href="status.php"><i class="fa fa-files-o"></i> <span> Lihat Status</span></a></li>
+      <li><a href="cetak.php"><i class="fa fa-files-o"></i> <span> Cetak SKU</span></a></li>
       <?php 
           } 
           else if(($_SESSION['level']) == 1) {

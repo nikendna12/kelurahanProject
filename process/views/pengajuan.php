@@ -59,7 +59,7 @@
                                       WHERE id_user = '" . $_SESSION['id_user'] . "' ")or die(mysql_error());
 
                 $data = mysql_fetch_array($sql1);
-                if($data['ktp'] != ""){
+                if($data['ktp'] != "" && $data['kk'] != '' && $data['lokusaha'] != '' && $data['supengantar'] != '' && $data['supernyataan'] != '' ){
               ?>
                 <div class="col-xs-2">
                 
@@ -83,8 +83,8 @@
                     <th>Alamat</th>
                     <th>Masa Berlaku</th>
                     <th>Alasan Pengajuan</th>
-                    <th>Status</th>
                     <th>Aksi</th>
+                    <th>Status</th>
                   </tr>
                 </thead>
                 <?php //'
@@ -99,14 +99,20 @@
                     <td><?php echo $r['alamat_usaha'] ?></td>
                     <td><?php echo $r['masa_berlaku'] ?></td>
                     <td><?php echo $r['alasan'] ?></td>
-                    <td >Belum Terkonfirmasi</td>
                     <td>
                         <div class="btn-group">
-                            <input type="button" class="btn btn-default" name="submit" value="Ajukan lagi" onclick="window.location='datadiri_detail.php?username=<?=$r['username'];?>' ">
+                            <input type="button" class="btn btn-default" name="submit" value="Ajukan lagi" onclick="cekMasaBerlaku('<?=$r['masa_berlaku'];?>','<?=$r['id_pengajuan'];?>')">
                         </div>
                         <div class="btn-group">
-                            <input type="button" class="btn btn-danger" name="hapus" value="Hapus SKU" onclick="window.location='../controller/hapusSKU.php?tid=<?=$r['id_pengajuan'];?>' ">
+                            <button class="btn btn-danger" name="hapus" onclick="window.location='../controller/hapusSKU.php?tid=<?=$r['id_pengajuan'];?>' "><i class="fa fa-trash"></i></button>
                         </div>
+                    </td>
+                    <td>
+                        <?php
+                          if($r['status_konfirmasi'] == 0){
+                            echo "Belum Terkonfirmasi";
+                          }
+                        ?>
                     </td>
                     <td></td>
                   </tr>
@@ -139,5 +145,18 @@
 <!-- ./wrapper -->
 
 <?php include "../bagan/js.html" ; ?>
+
+<script>
+function cekMasaBerlaku(tgl, id) {
+  const tglBerlaku = new Date(tgl)
+
+  if (tglBerlaku > new Date()) {
+    alert("Silahkan ajukan kembali setelah tanggal " + tgl)
+  } else {
+    window.location.href = "../controller/ajukanlagi.php?id=" + id;
+    //redirect ke fungsi ngajuion lulanf (add masa berlaku)
+  }
+}
+</script>
 </body>
 </html>

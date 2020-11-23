@@ -1,43 +1,26 @@
 <?php
-//error_reporting(0);
-session_start();
-include "koneksi.php";
-include "fungsi.php";
+	//error_reporting(0);
+	session_start();
+	include "koneksi.php";
+	include "fungsi.php";
 
-$namausaha=$_POST['namausaha'];
-$alamat=$_POST['alamat'];
-$tglapply=date("Y-m-d");
-$masaberlaku=date("Y-m-d", strtotime("+3 months"));
-$alasan=$_POST['alasan'];
-$username=$_SESSION['username'];
-$cek = mysql_query("SELECT * FROM pengajuan where nama_usaha = '$namausaha'");
-$usernameresult = mysql_num_rows($cek);
-if($usernameresult > 0){ ?>
- 	<script language="javascript"> -->
- 		alert("Nama Usaha sudah ADA, silahkan masukan Nama Usaha yang lain","../views/pengajuan.php");
-		history.go(-1);
-	</script>
- <?php 
-exit(); 
-}	
+	$id_pengajuan = $_GET['id'];
+	$masaberlaku = date("Y-m-d", strtotime("+3 months"));
+	print_r($id_pengajuan);
 
-$simpan=mysql_query("insert into pengajuan values('','$username','$namausaha','$alamat','$tglapply','$masaberlaku','$alasan')");
-// print_r($simpan);
-// exit();
-
-if($simpan) 
-{ 
-	msgbox("Berhasil Tersimpan","../views/pengajuan.php");
-} 
-else { ?>
-	<!-- msgbox("gagal","index.php"); //redirect ke index.php?tampilan=daftardg cara naik 1 folder -->
-	<script language="javascript">
-		alert("gagal","../views/pengajuan.php");
-		history.go(-1);
-	</script>
-<?php } 
-
-?>
-
+	$simpan = mysql_query("UPDATE pengajuan SET masa_berlaku = '$masaberlaku'
+						WHERE id_pengajuan = '$id_pengajuan'");
+	if($simpan)
+	{
+		msgbox("Berhasil Perpanjang SKU","../views/pengajuan.php");
+	}
+	else { ?>
+		<script language="javascript">
+			alert("Gagal Perpanjang SKU","../views/pengajuan.php");
+			history.go(-1);
+		</script>
+	<?php } 
+	
+	?>
 		
 
