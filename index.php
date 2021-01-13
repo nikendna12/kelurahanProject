@@ -287,7 +287,7 @@
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
               <h3>Alamat</h3>
-              <address><a href="https://goo.gl/maps/AzDcrKnkYzyXkoMC7" target="_blank">Jl. Paus Raya No. 1 (Karawaci), Tangerang, Banten, Indonesia</a></address>
+              <address><a href="https://goo.gl/maps/rKhWf3cXiXnRSLhy8" target="_blank">Jl. Paus Raya No. 1 Kel. Karawaci Baru Kec. Karawaci, Kota Tangerang, Banten, Indonesia</a></address>
             </div>
           </div>
 
@@ -303,7 +303,7 @@
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:kec.karawaci@tangerangkota.go.id">kel.karawacibaru@tangerangkota.go.id</a></p>
+              <p><a href="mailto:karawacibarukelurahan@gmail.com">karawacibarukelurahan@gmail.com</a></p>
             </div>
           </div>
 

@@ -17,7 +17,16 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Welcome <?php echo $_SESSION['nama_lengkap'];?> 
+        Welcome <?php echo $_SESSION['nama_lengkap'];?>
+        <?php 
+            $sql1 = mysql_query("SELECT * FROM dokumen, user
+                                        WHERE dokumen.id_user = user.id_user
+                                        AND dokumen.id_user = '" . $_SESSION['id_user'] . "'");
+            $r1=mysql_fetch_assoc($sql1);
+
+            if ($r1['ktp']!= '')
+        ?>
+         
         <small> <?php echo $_SESSION['username'];?></small>
       </h1>
       <ol class="breadcrumb">
@@ -35,12 +44,6 @@
           </div>
           <div class="panel-body">
               <?php
-                    $sql1 = mysql_query("SELECT * FROM dokumen, user
-                                        WHERE dokumen.id_user = user.id_user
-                                        AND dokumen.id_user = '" . $_SESSION['id_user'] . "'");
-
-                    $r1=mysql_fetch_assoc($sql1);
-
                   if ($r1['ktp']!=''){   
                     echo "<p align=center><img class='img-responsive' src='../dist/img/abc/$r1[ktp]' oncontextmenu='return false;'></p>";
                   } else {

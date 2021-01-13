@@ -59,7 +59,7 @@
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
-                  <button type="button" class="btn btn-default" onclick="self.history.back()">Cancel</button>
+                  <button type="button" class="btn btn-default" onclick="self.history.back()">Batal</button>
                   <button type="submit" class="btn btn-info pull-right">Simpan</button>
                 </div>
                 <!-- /.box-footer -->

@@ -22,7 +22,7 @@ if ($jumlahdata > 0) //apabila datanya diketemukan
 	?>
 
 	<script language="javascript">
-		alert("Selamat datang, Saudara/i <?php echo $user['nama_lengkap'];?> silahkan lengkapi data siswa dan nilai");
+		alert("Selamat datang, Saudara/i <?php echo $user['nama_lengkap'];?> silahkan lengkapi profil diri dan unggah dokumen untuk keperluan verifikasi");
 		document.location="../views/halamandepan.php";
 	</script>
 	<?php 
@@ -32,7 +32,7 @@ else
 	//msgbox("gagal login","../");
 ?>
 <script language="javascript">
-	alert("Maaf, Anda Gagal Login");
+	alert("Maaf, username atau password salah");
 	history.go(-1);
 </script>
 

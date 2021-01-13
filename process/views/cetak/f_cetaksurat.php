@@ -1,6 +1,6 @@
 <?php
 ob_start();
-include (dirname(__FILE__).'/cetak_biodata.php');
+include (dirname(__FILE__).'/cetaksurat.php');
 $content = ob_get_clean();
 
 	// conversion HTML => PDF

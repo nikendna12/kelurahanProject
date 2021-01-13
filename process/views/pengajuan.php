@@ -85,6 +85,7 @@
                     <th>Alasan Pengajuan</th>
                     <th>Aksi</th>
                     <th>Status</th>
+                    <th>Cetak SKU</th>
                   </tr>
                 </thead>
                 <?php //'
@@ -114,6 +115,7 @@
                           }
                         ?>
                     </td>
+                    <td><a class="btn btn-default" name="btnCetak" href="cetak/f_cetaksurat.php" target="_blank">Cetak</a></td>
                     <td></td>
                   </tr>
                   <?php $no++; } ?>

@@ -65,19 +65,19 @@
                     <div class="form-group">
                       <label class="col-md-4">NIK KTP</label>
                       <div class="col-md-5">
-                        <input type="text" class="form-control" name="nik" value="<?php echo $data['nik_ktp']; ?>" required="required"  />
+                        <input type="number" class="form-control" name="nik" value="<?php echo $data['nik_ktp']; ?>" required="required"  />
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-md-4">No. Kartu Keluarga</label>
                       <div class="col-md-5">
-                        <input type="text" class="form-control" name="nokk" value="<?php echo $data['no_kk']; ?>" required="required"  />
+                        <input type="number" class="form-control" name="nokk" value="<?php echo $data['no_kk']; ?>" required="required"  />
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-md-4">No. Handphone</label>
                       <div class="col-md-5">
-                        <input type="text" class="form-control" name="nohp" value="<?php echo $data['no_hp']; ?>" required="required"  />
+                        <input type="number" class="form-control" name="nohp" value="<?php echo $data['no_hp']; ?>" required="required"  />
                       </div>
                     </div>
                     <div class="form-group">
@@ -89,13 +89,13 @@
                     <div class="form-group">
                       <label class="col-md-4">Alamat Rumah</label>
                       <div class="col-md-5">
-                        <input type="text" class="form-control" name="alamat" value="<?php echo $data['alamat']; ?>" required="required"  />
+                        <input type="textarea" class="form-control" name="alamat" value="<?php echo $data['alamat']; ?>" required="required"  />
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-md-4">E-mail</label>
                       <div class="col-md-5">
-                        <input type="text" class="form-control" name="email" value="<?php echo $data['email']; ?>" required="required"  />
+                        <input type="email" class="form-control" name="email" value="<?php echo $data['email']; ?>" required="required"  />
                       </div>
                     </div>
                     <div class="form-group">

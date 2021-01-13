@@ -42,32 +42,33 @@
                         <ul>
                             <li>Segera lengkapi data Anda dan kelengkapan dokumen yang dibutuhkan.</li>
                             <li>Klik menu Profil Diri untuk melengkapi data Anda.</li>
-                            <li>Klik menu Unggah Dokumen untuk ............. Mohon di scan dengan gambar jelas </li>
-                            <li>Klik menu Mengajukan untuk ............. </li>
-                            <li>Klik menu Lihat Status untuk ............. </li>
+                            <li>Klik menu Unggah Dokumen untuk menggunggah dokumen yang diperlukan untuk verifikasi data. Mohon di scan dengan gambar jelas. </li>
+                            <li>Klik menu Mengajukan dan pilih Ajukan Usaha Baru untuk mengajukan pembuatan Surat Keterangan Usaha baru.</li>
+                            <li>Klik menu Cetak SKU untuk mencetak SKU Anda bila telah selesai diverifikasi oleh admin.</li>
 
                         </ul>
                       </li>
                   </ul>
                   <hr>
                   <ul class="list-unstyled">
-                      <li><b>Upload kelengkapan dokumen dibawah ini untuk keperluan verifikasi.</b>
+                      <li><b>Upload kelengkapan dokumen dibawah ini untuk keperluan verifikasi:</b>
                       <ul>
                           <li>Scan Kartu Tanda Pengenal.</li>
                           <li>Scan Kartu Keluarga.</li>
                           <li>Foto Lokasi Usaha Anda.</li>
-                          <li>scan Surat Pengantar.</li>
-                          <li>scan Surat Pernyataan.</li>
+                          <li>Scan Surat Pengantar RT/RW.</li>
+                          <li>Scan Surat Pernyataan Usaha.</li>
                       </ul>
                       </li><br>
                       <li><b>Dengan ketentuan sebagai berikut:</b>
                       <ul>
-                          <li>File dokumen yang diunggah harus merupakan hasil scan, boleh foto asal jelas.</li>
+                          <li>File dokumen yang diunggah harus merupakan hasil scan, boleh foto asalkan data terbaca dengan jelas.</li>
                           <li>Ukuran file yang diunggah tidak melebihi 2MB</li>
                       </ul>
                       </li>   <hr>
                       <li><b>Keterangan : </b><br>
-                      *) Pilih salah satu, mana yang dikeluarkan lebih dulu oleh pihak sekolah. Jika ijazah sudah diterbitkan oleh sekolah, sebaiknya gunakan ijazah untuk memenuhi kelengkapan dokumen. </li>
+                      *) Untuk Surat Pengantar RT/RW dibuat berdasarkan wilayah domisili tempat usaha dan wajib berada di wilayah Kelurahan Karawaci Baru. <br>
+                      *) Untuk Surat Pernyataan Usaha, boleh ditulis tangan ataupun diketik dengan komputer serta wajib berisi data diri dan alamat usaha yang bertanda tangan di atas materai</li>
                       </li><br>
                   </ul>
                 </div>
