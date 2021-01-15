@@ -7,6 +7,14 @@
   include "../../controller/koneksi.php"; 
   include "../../bagan/head.html" ;
   session_start();
+	
+  $sql = mysql_query("SELECT * FROM user 
+                          WHERE id_user = '$_SESSION[id_user]' ");
+  $r = mysql_fetch_array($sql);
+
+  $sql2 = mysql_query("SELECT * FROM pengajuan
+                          WHERE username = '$_SESSION[username]' ");
+  $r2 = mysql_fetch_array($sql2);
 ?> 
 </head>
 
@@ -22,21 +30,21 @@
     Yang bertanda tangan dibawah ini, Lurah Karawaci Baru Kecamatan Karawaci Kota Tangerang menerangkan bahwa :<br>
     </p>
     <pre>
-            Nama               :  ELI SUSANTI
-            Jenis Kelamin      :  Perempuan
-            Tempat Tgl Lahir   :  Jakarta, 28-07-1972
-            Bangsa / Agama     :  Indonesia/Islam
-            Pekerjaan          :  Mengurus Rumah Tangerang
-            Nomor NIK KTP      :  367183736382929
-            Alamat             :  Jl. Mujair I No.99, RT 5, Karawaci Baru Tangerang
+            Nama               :  <?php echo $r['nama_lengkap'] ; ?> 
+            Jenis Kelamin      :  <?php echo $r['jkel'] ; ?> 
+            Tempat Tgl Lahir   :  <?php echo $r['tempat_lahir'] ; ?> , <?php echo date_format(date_create($r['tgl_lahir']), "d-m-Y") ; ?> 
+            Bangsa / Agama     :  <?php echo $r['bangsa'] ; ?> / <?php echo $r['agama'] ; ?> 
+            Pekerjaan          :  <?php echo $r['pekerjaan'] ; ?> 
+            Nomor NIK KTP      :  <?php echo $r['nik_ktp'] ; ?> 
+            Alamat             :  <?php echo $r['alamat'] ; ?> 
     </pre>
     <p align="center">
     Menerangkan bahwa warga tersebut memiliki Usaha di lingkungan Kelurahan Karawaci Baru Kecamatan Karawaci Kota Tangerang sebagai berikut : <br>
     </p>
     <pre>
-            Nama Usaha         :  <b>Menjual KUE-KUE</b>
-            Alamat Usaha       :  Jl. Mujair I No.99, RT 5, Karawaci Baru Tangerang
-            Masa Berlaku       :  25 Oktober s/d 25 Januari 2020
+            Nama Usaha         :  <b><?php echo $r2['nama_usaha'] ; ?> </b>
+            Alamat Usaha       :  <?php echo $r2['alamat_usaha'] ; ?> 
+            Masa Berlaku       :  <?php echo date_format(date_create($r2['tgl_apply']), "d-m-Y") ; ?> s/d <?php echo date_format(date_create($r2['masa_berlaku']), "d-m-Y") ; ?> 
             Catatan            :  1. Surat keterangan ini bukan merupakan Surat Izin Usaha
                                   2. Tempat usaha tidak menggunakan Tanah Fasos
                                      Fasum Kota Tangerang (trotoar, jalan)
@@ -48,7 +56,7 @@
     </p>
     <br><br>
     <p align="right">
-    Tangerang, 25 Oktober 2019<br>
+    Tangerang, <?php echo date_format(date_create($r2['tgl_apply']), "d-m-Y") ; ?><br>
     LURAH KARAWACI BARU
     </p>
   

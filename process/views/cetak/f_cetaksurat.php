@@ -9,7 +9,7 @@ $content = ob_get_clean();
  	{
  		$html2pdf = new HTML2PDF('P', 'A4', 'en');
  		$html2pdf->writeHTML($content);
- 		$html2pdf->Output('biodata.pdf');
+ 		$html2pdf->Output('Surat Keterangan Usaha.pdf');
  	}
  	catch(HTML2PDF_exception $e) { echo $e; }
 ?>

@@ -109,13 +109,12 @@
                         </div>
                     </td>
                     <td>
-                        <?php
-                          if($r['status_konfirmasi'] == 0){
-                            echo "Belum Terkonfirmasi";
-                          }
-                        ?>
+                        <?php echo $r['status_konfirmasi'] == 0 ? 'Belum Dikonfirmasi' : 'Sudah Dikonfirmasi' ?>
                     </td>
-                    <td><a class="btn btn-default" name="btnCetak" href="cetak/f_cetaksurat.php" target="_blank">Cetak</a></td>
+                    <td><button class="btn btn-default" name="btnCetak" onclick="window.location='cetak/f_cetaksurat.php'"
+                          <?php echo $r['status_konfirmasi'] == 0 ? 'disabled' : '' ?>> Cetak
+                        </button>
+                    </td>
                     <td></td>
                   </tr>
                   <?php $no++; } ?>

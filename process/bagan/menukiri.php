@@ -28,7 +28,7 @@
         </ul>
         <li><a href="datapengaju.php"><i class="fa fa-files-o"></i> <span> Data Pengaju</span></a></li>
         <li><a href="datadokumen.php"><i class="fa fa-files-o"></i> <span> Data Dokumen</span></a></li>
-        <li><a href="datapengaju.php"><i class="fa fa-files-o"></i> <span> Data Pengajuan SKU</span></a></li>
+        <li><a href="datapengajuanSKU.php"><i class="fa fa-files-o"></i> <span> Data Pengajuan SKU</span></a></li>
       </li>
       <?php } ?>
       <!-- <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>

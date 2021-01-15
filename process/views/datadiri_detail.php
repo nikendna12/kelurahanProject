@@ -86,6 +86,13 @@
                     </div>
                   </div>
                   <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-3 control-label">Pekerjaan</label>
+
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="inputPassword3" placeholder="Pekerjaan" name="pekerjaan" value="<?php echo $row['pekerjaan'];?>" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
                     <label for="inputPassword3" class="col-sm-3 control-label">No. Kartu Keluarga</label>
 
                     <div class="col-sm-9">

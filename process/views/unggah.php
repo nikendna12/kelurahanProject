@@ -23,16 +23,22 @@
                                         WHERE dokumen.id_user = user.id_user
                                         AND dokumen.id_user = '" . $_SESSION['id_user'] . "'");
             $r1=mysql_fetch_assoc($sql1);
-
-            if ($r1['ktp']!= '')
         ?>
-         
-        <small> <?php echo $_SESSION['username'];?></small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Input Data Diri</li>
       </ol>
+      <br>
+      <?php if ($r1['status_not']!= '') { ?>       
+      <div class="alert alert-danger">
+        <h3><?php echo 'Peringatan! ', $r1['status_not']; ?></h3>
+      </div>
+      <?php } ?>
+      <div class="alert alert-info">
+        Unggah kelengkapan dokumen.<br>
+        File dokumen yang di unggah harus dalam format *.JPG, *.JPEG, atau *.PNG dengan ukuran maksimal 2MB.
+      </div>
     </section>
 
     <section class="content">

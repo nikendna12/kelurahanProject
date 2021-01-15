@@ -21,7 +21,7 @@ if($usernameresult > 0){ ?>
 exit(); 
 }	
 
-$simpan=mysql_query("insert into pengajuan values('','$username','$namausaha','$alamat','$tglapply','$masaberlaku','$alasan')");
+$simpan=mysql_query("insert into pengajuan values('','$username','$namausaha','$alamat','$tglapply','$masaberlaku','$alasan',0)");
 // print_r($simpan);
 // exit();
 

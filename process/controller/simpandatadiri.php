@@ -8,6 +8,7 @@ $nik=$_POST['nik'];
 $tgllahir=$_POST['tgllahir'];
 $nama=$_POST['nama'];
 $alamat=$_POST['alamat'];
+$pekerjaan=$_POST['pekerjaan'];
 $nokk=$_POST['nokk'];
 $nohp=$_POST['nohp'];
 $email=$_POST['email'];
@@ -31,6 +32,7 @@ $simpan=mysql_query("UPDATE user SET nama_lengkap = '$nama',
 									 nik_ktp = '$nik',
 									 alamat = '$alamat',
 									 tgl_lahir = '$tgllahir',
+									 pekerjaan = '$pekerjaan',
 									 no_kk = '$nokk',
 									 no_hp = '$nohp',
 									 email = '$email',
