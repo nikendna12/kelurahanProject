@@ -22,7 +22,7 @@ if ($jumlahdata > 0) //apabila datanya diketemukan
 	?>
 
 	<script language="javascript">
-		alert("Selamat datang, Saudara/i <?php echo $user['nama_lengkap'];?> silahkan lengkapi profil diri dan unggah dokumen untuk keperluan verifikasi");
+		alert("Selamat datang, Saudara/i <?php echo $user['nama_lengkap'];?> ");
 		document.location="../views/halamandepan.php";
 	</script>
 	<?php 

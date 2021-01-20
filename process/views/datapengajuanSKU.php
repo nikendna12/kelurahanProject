@@ -41,7 +41,7 @@
             <div class="panel-body">
               <div class="box"> 
                 <div class="box-body">
-                  <table id="example1" class="table table-bordered table-striped">
+                  <table id="example1" class="table table-bordered table-striped" style="background-color:#F6F6F6;">
                     <thead>
                     <tr>
                       <th>#</th>
@@ -70,7 +70,7 @@
                         while($r = mysql_fetch_array($sql)){
                     ?>
                     <tr>
-                      <td><?php echo $no; ?></td>
+                      <td><?php echo $no; echo $r['id_pengajuan'];?></td>
                       <td style="display:none;"><?php echo $r['id_pengajuan']; ?></td>
                       <td><?php echo $r['nama_lengkap']; ?></td>
                       <td><?php echo $r['nama_usaha']; ?></td>
@@ -79,11 +79,11 @@
                       <td><?php echo $r['masa_berlaku']; ?></td>
                       <td><?php echo $r['alasan']; ?></td>
                       <td >
-                          <div class="modal fade" id="modal-yes">
+                          <div class="modal fade" id="modal-yes-<?php echo $r['id_pengajuan'] ?>">
                             <div class="modal-dialog">
                               <div class="modal-content">
                                 <div class="modal-body">
-                                  <b>Yakin ingin konfirmasi pengajuan SKU ?</b>
+                                  <b>Yakin ingin konfirmasi pengajuan SKU ? <?php echo $r['id_pengajuan']; ?></b>
                                 </div>
                                 <div class="modal-footer">
                                   <input type="submit" class="btn btn-primary" name="submit" value="Ya, Konfirmasi" onclick="window.location='../controller/pengajuanaccept.php?tid=<?php echo $r['id_pengajuan'];?>' ">
@@ -94,10 +94,10 @@
                               <!-- /.modal-content -->
                             </div>
                             <!-- /.modal-dialog -->
-                          </div>
-                          <button class="btn btn-success" type="button" data-toggle="modal" data-target="#modal-yes"><i class="fa fa-check"></i></button>
+                          </div>                                                            
+                          <button class="btn btn-success" type="button" data-toggle="modal" data-target="#modal-yes-<?php echo $r['id_pengajuan']; ?>">Konfirmasi</button>
                           
-                          <button class="btn btn-default" name="cetak" onclick="window.location='../controller/hapusSKU.php?tid=<?=$r['id_pengajuan'];?>' "><i class="fa fa-file"></i></button>
+                          
                      
                       </td>
                       <td><?php echo $r['status_konfirmasi'] == 0 ? 'Belum Dikonfirmasi' : 'Sudah Dikonfirmasi' ?></td>

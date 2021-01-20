@@ -99,15 +99,15 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="col-md-4">Nama Siswa</label>
+                      <label class="col-md-4">NIK KTP</label>
                       <div class="col-md-5">
                         <input type="text" class="form-control" name="nama" value="<?php echo $data['nik_ktp']; ?>" required="required"  />
                       </div>
                     </div>
                     <div class="form-actions">
                       <div class="col-lg-9">
-                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal" onclick="self.history.back()">Cancel</button>&nbsp;
-                        <button type="submit" name="ubah" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal" onclick="self.history.back()">Batal</button>&nbsp;
+                        <button type="submit" name="ubah" class="btn btn-primary">Simpan Perubahan</button>
                       </div>
                     </div>
 

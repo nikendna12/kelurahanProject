@@ -46,7 +46,7 @@
                     <label for="inputPassword3" class="col-sm-3 control-label">Alamat Usaha</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="inputPassword3" placeholder="Alamat Lengkap" name="alamat" required>
+                      <textarea type="text" class="form-control" id="inputPassword3" placeholder="Alamat Lengkap" name="alamat" required></textarea>
                     </div>
                   </div>
                   <div class="form-group">

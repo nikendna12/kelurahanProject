@@ -20,8 +20,10 @@
 <div class="wrapper">
   <?php include "../bagan/header.html" ; ?>
   <?php include "../bagan/menukiri.php" ; ?>
-
-  <!-- Content Wrapper. Contains page content -->
+  <?php include "../controller/koneksi.php";
+    if(($_SESSION['level']) == 2){
+  ?>
+  <!-- HALAMAN USER -->
   <div class="content-wrapper">
     <section class="content">
       <div class="row">
@@ -44,8 +46,7 @@
                             <li>Klik menu Profil Diri untuk melengkapi data Anda.</li>
                             <li>Klik menu Unggah Dokumen untuk menggunggah dokumen yang diperlukan untuk verifikasi data. Mohon di scan dengan gambar jelas. </li>
                             <li>Klik menu Mengajukan dan pilih Ajukan Usaha Baru untuk mengajukan pembuatan Surat Keterangan Usaha baru.</li>
-                            <li>Klik menu Cetak SKU untuk mencetak SKU Anda bila telah selesai diverifikasi oleh admin.</li>
-
+                            <li>Apabila unggahan dokumen serta profil diri SKU Anda telah selesai dikonfirmasi oleh admin, Anda bisa mencetak SKU di tombol Cetak yang ada di menu Mengajukan.</li>
                         </ul>
                       </li>
                   </ul>
@@ -116,7 +117,69 @@
     </section>
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
+  <?php 
+      } 
+      else if(($_SESSION['level']) == 1) {
+  ?>
+  <!-- HALAMAN ADMIN -->
+  <div class="content-wrapper">
+    <section class="content">
+      <div class="row">
+        <section class="col-lg-12 connectedSortable">
+          <div class="box box-widget widget-user-2">
+            <div class="widget-user-header bg-aqua">
+              <h3>
+                Welcome <?php echo $_SESSION['nama_lengkap'];?> 
+                <small> <?php echo $_SESSION['username'];?></small>
+              </h3>
+            </div>
+            <div class="box-footer no-padding">
+              <div class="container">
+                <div class="col-md-11">
+                  <ul class="list-unstyled">
+                      <br>
+                      <li><b>PERHATIAN UNTUK ADMIN</b>
+                        <ul>
+                            <li>Klik menu Data Pengaju untuk melihat Data Pengaju SKU.<br> 
+                            Klik Detail untuk melihat Data Pengaju SKU yang telah dilengkapi oleh User secara detail.<br>
+                            Apabila semua data sudah sesuai, klik Konfirmasi.</li>
+                            <li>Klik menu Data Dokumen untuk melihat daftar Dokumen yang telah diunggah oleh Pengaju SKU.</li>
+                            <li>Klik menu Data Pengajuan SKU untuk melihat daftar pengajuan SKU yang diajukan oleh User. </li>
+                            <li>Pada menu Data Pengaju klik tombol "Detail" untuk melihat data profil diri yang diajukan oleh User.<br> 
+                            Apabila data telah sesuai, klik "Konfirmasi".</li>
+                            <li>Pada menu Data Dokumen klik tombol "View" untuk melihat dokumen yang diunggah oleh User.<br>
+                            Apabila data telah sesuai, klik tanda "Ceklis" lalu pilih "Ya, Konfirmasi" untuk menyetujui dokumen.<br> 
+                            Apabila ada yang belum sesuai klik tanda "Silang" dan pilih alasan reject lalu klik "Reject" untuk menolak pengajuan dokumen yang diunggah User.</li>
+                            <li>Pada menu Data Pengajuan SKU klik tombol "Detail" untuk melihat data profil diri yang diajukan oleh User.<br> 
+                            Apabila semua data telah sesuai, klik klik "Ya, Konfirmasi".</li>
+                        </ul>
+                      </li>
+                  </ul>
+                  <hr>
+                  <ul class="list-unstyled">
+                      <li><b>Catatan untuk Admin :</b>
+                      <ul>
+                          <li>Pastikan kembali semua dokumen sudah sesuai sebelum mengkonfirmasi pengajuan SKU.</li>
+                          <li>Pastikan kembali data di KTP dan KK sudah sesuai dengan data pengajuan SKU.</li>
+                          <li>Pastikan kembali bahwa lokasi usaha tidak berada di jalanan atau fasilitas umum.</li>
+                          <li>Daftar pengajuan di menu Data Pengajuan SKU hanya bisa ditampilkan bila Data Pengaju dan Data Dokumen keduanya sudah dikonfirmasi.</li>
+                      </ul>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+          
+        </section>
+        <!-- right col -->
+      </div>
+      <!-- /.row (main row) -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <?php } ?>
+
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0

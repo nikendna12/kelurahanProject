@@ -17,7 +17,7 @@ if($simpan)
 else { ?>
 	<!-- msgbox("gagal","index.php"); //redirect ke index.php?tampilan=daftardg cara naik 1 folder -->
 	<script language="javascript">
-		alert("gagal","../views/datadokumen.php");
+		alert("Maaf Gagal Tersimpan","../views/datadokumen.php");
 		history.go(-1);
 	</script>
 <?php } 

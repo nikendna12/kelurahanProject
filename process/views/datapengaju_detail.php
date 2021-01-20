@@ -112,7 +112,7 @@
                     </div>
                     <div class="form-actions">
                       <div class="col-lg-9">
-                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal" onclick="self.history.back()">Cancel</button>&nbsp;
+                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal" onclick="self.history.back()">Batal</button>&nbsp;
                         <button type="submit" name="ubah" class="btn btn-primary">Konfirmasi</button>
                       </div>
                     </div>

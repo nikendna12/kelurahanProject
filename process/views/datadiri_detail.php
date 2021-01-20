@@ -60,7 +60,7 @@
                     <label for="inputEmail3" class="col-sm-3 control-label">NIK</label>
 
                     <div class="col-sm-9">
-                      <input type="number" class="form-control" id="inputEmail3" placeholder="NIK KTP" name="nik" value="<?php echo $row['nik_ktp'];?>" required>
+                      <input type="number" class="form-control" id="inputEmail3" placeholder="NIK KTP" max="9999999999999999" name="nik" value="<?php echo $row['nik_ktp'];?>" required>
                     </div>
                   </div>
                   <div class="form-group">
@@ -96,14 +96,14 @@
                     <label for="inputPassword3" class="col-sm-3 control-label">No. Kartu Keluarga</label>
 
                     <div class="col-sm-9">
-                      <input type="number" class="form-control" id="inputPassword3" placeholder="Nomor Kartu Keluarga" name="nokk" value="<?php echo $row['no_kk'];?>" required>
+                      <input type="number" class="form-control" id="inputPassword3" placeholder="Nomor Kartu Keluarga" max="9999999999999999" name="nokk" value="<?php echo $row['no_kk'];?>" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword3" class="col-sm-3 control-label">No. HP</label>
 
                     <div class="col-sm-9">
-                      <input type="number" class="form-control" id="inputPassword3" placeholder="Nomor HP" name="nohp" value="<?php echo $row['no_hp'];?>" required>
+                      <input type="number" class="form-control" id="inputPassword3" placeholder="Nomor HP" name="nohp" max="99999999999999" value="<?php echo $row['no_hp'];?>" required>
                     </div>
                   </div>
                   <div class="form-group">

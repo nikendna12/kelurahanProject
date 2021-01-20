@@ -100,7 +100,7 @@
                     <td><?php echo $r['alamat_usaha'] ?></td>
                     <td><?php echo $r['masa_berlaku'] ?></td>
                     <td><?php echo $r['alasan'] ?></td>
-                    <td>
+                    <td width="100px">
                         <div class="btn-group">
                             <input type="button" class="btn btn-default" name="submit" value="Ajukan lagi" onclick="cekMasaBerlaku('<?=$r['masa_berlaku'];?>','<?=$r['id_pengajuan'];?>')">
                         </div>
@@ -111,7 +111,7 @@
                     <td>
                         <?php echo $r['status_konfirmasi'] == 0 ? 'Belum Dikonfirmasi' : 'Sudah Dikonfirmasi' ?>
                     </td>
-                    <td><button class="btn btn-default" name="btnCetak" onclick="window.location='cetak/f_cetaksurat.php'"
+                    <td><button class="btn btn-default" name="btnCetak" onclick="window.location='cetak/f_cetaksurat.php?tid=<?=$r['id_pengajuan'];?>'"
                           <?php echo $r['status_konfirmasi'] == 0 ? 'disabled' : '' ?>> Cetak
                         </button>
                     </td>

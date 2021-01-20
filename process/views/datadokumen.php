@@ -73,7 +73,7 @@
                     </tr>
                     </thead>
                     <?php
-                        $sql = mysql_query("SELECT * FROM user RIGHT JOIN dokumen 
+                        $sql = mysql_query("SELECT * FROM user LEFT JOIN dokumen 
                         ON user.id_user=dokumen.id_user WHERE user.status_verifikasi != 0 AND dokumen.verifikasi = 0");
                         $no = 1;
                         while($r = mysql_fetch_array($sql)){
@@ -101,7 +101,7 @@
                           </div>
                           <!-- /.modal-dialog -->
                         </div>  
-                        <div class="modal fade" id="modal-yes">
+                        <div class="modal fade" id="modal-yes-<?php echo $r['id_dokumen'] ?>">
                           <div class="modal-dialog">
                             <div class="modal-content">
                               <div class="modal-body">
@@ -145,7 +145,7 @@
                           </div>
                           <!-- /.modal-dialog -->
                         </div>
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-yes"><i class="fa fa-check"></i></button>
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-yes-<?php echo $r['id_dokumen'] ?>"><i class="fa fa-check"></i></button>
                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-reject"><i class="fa fa-close"></i></button>
                       </td>
                     </tr>               

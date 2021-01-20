@@ -16,16 +16,6 @@
           else if(($_SESSION['level']) == 1) {
       ?>
       <li class="treeview">
-        <a href="#">
-          <i class="fa fa-pie-chart"></i>
-          <span>Kelola Website</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li><a href="kelola_surat.php"><i class="fa fa-circle-o"></i> Kelola Isi Surat</a></li>
-        </ul>
         <li><a href="datapengaju.php"><i class="fa fa-files-o"></i> <span> Data Pengaju</span></a></li>
         <li><a href="datadokumen.php"><i class="fa fa-files-o"></i> <span> Data Dokumen</span></a></li>
         <li><a href="datapengajuanSKU.php"><i class="fa fa-files-o"></i> <span> Data Pengajuan SKU</span></a></li>
