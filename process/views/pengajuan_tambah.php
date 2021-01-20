@@ -46,7 +46,7 @@
                     <label for="inputPassword3" class="col-sm-3 control-label">Alamat Usaha</label>
 
                     <div class="col-sm-9">
-                      <input type="text" class="form-control" id="inputPassword3" placeholder="Alamat Lengkap" name="alamat" required>
+                      <textarea type="text" class="form-control" id="inputPassword3" placeholder="Alamat Lengkap" name="alamat" required></textarea>
                     </div>
                   </div>
                   <div class="form-group">
@@ -59,7 +59,7 @@
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
-                  <button type="button" class="btn btn-default" onclick="self.history.back()">Cancel</button>
+                  <button type="button" class="btn btn-default" onclick="self.history.back()">Batal</button>
                   <button type="submit" class="btn btn-info pull-right">Simpan</button>
                 </div>
                 <!-- /.box-footer -->

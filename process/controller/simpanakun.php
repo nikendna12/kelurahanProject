@@ -22,16 +22,16 @@ exit();
 
 if($password1==$password2){
 		$simpan=mysql_query("insert into user
-		values('','$user','$password1','$nama','nopict','2','','','','','','','','','','','')");
+		values('','$user','$password1','$nama','nopict','2','','','','','','','','','','','','')");
 
 		if($simpan) 
 		{ 
-			msgbox("Berhasil Tersimpan","../../index.php");
+			msgbox("Berhasil Tersimpan. Silakan lakukan login.","../../index.php");
 		} else 
 		{ ?>
 			<!-- msgbox("gagal","index.php"); //redirect ke index.php?tampilan=daftardg cara naik 1 folder -->
 			<script language="javascript">
-				alert("gagal","../../index.php");
+				alert("Mohon periksa kembali data yang Anda masukkan.","../../index.php");
 				history.go(-1);
 			</script>
 		<?php } 

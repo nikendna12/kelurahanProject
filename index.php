@@ -181,13 +181,12 @@
                 <ol style="font-size:11px">
                   <li>Klik Menu Daftar dan isi formulir pendaftaran</li>
                   <li>Login menggunakan username dan password yang telah didaftarkan</li>
-                  <li>Untuk melihat atau mengubah data diri klik menu Profil</li>
-                  <li>Untuk mengajukan Surat Keterangan Usaha (SKU) klik menu Pengajuan SKU</li>
-                  <li>Di menu pengajuan SKU, upload semua berkas yang diperlukan untuk mengajukan SKU, lalu klik Ajukan</li>
-                  <li>Tunggu sekitar 5 sampai 15 menit di jam kerja untuk melihat apakah pengajuan disetujui atau masih ada berkas yang kurang sehingga pengajuan ditolak.</li>
-                  <li>Untuk melihat apakah Pengajuan telah disetujui atau belum, Anda bisa masuk ke menu Riwayat Pengajuan. Jika pengajuan disetujui, Anda bisa mencetak Surat Keterangan Usaha dengan format yang telah tersedia (sesuai dengan data yang ada di profil) atau langsung datang ke Kelurahan dan membiarkan pihak Kelurahan yang mencetaknya.</li>
-                  <li>Datang ke Kelurahan dengan menunjukkan KTP Asli, lalu Kelurahan akan memberikan stempel serta tanda tangan pada SKU yang telah dicetak.</li>
-                
+                  <li>Untuk mengisi data diri pengajuan SKU klik menu Profil Diri</li>
+                  <li>Untuk mengunggah dokumen persyaratan pengajuan SKU klik menu Unggah Dokumen</li>
+                  <li>Tunggu sekitar 15-30 menit pada jam kerja Kelurahan (Senin s/d Jumat jam 08.00 s/d 16.00 WIB) untuk melihat apakah pengajuan disetujui atau masih ada berkas yang kurang atau belum sesuai sehingga pengajuan ditolak.</li>
+                  <li>Setelah data profil diri dan data dokumen dikonfirmasi oleh Admin, Anda bisa mulai mengajukan Surat Keterangan Usaha (SKU) melalui menu Mengajukan dan pilih Ajukan Usaha Baru</li>
+                  <li>Jika pengajuan telah dikonfirmasi, Anda bisa mencetak Surat Keterangan Usaha dengan format yang telah tersedia (sesuai dengan data yang ada di profil.</li>
+                  <li>Datang ke Kelurahan dengan menunjukkan KTP Asli dan membawa SKU yang telah dicetak, lalu Kelurahan akan memberikan stempel serta tanda tangan pada SKU yang telah dicetak.</li>
                 </ol> 
               </p>
           </div>
@@ -195,7 +194,7 @@
           <div class="col-md-8 wow fadeInUp" data-wow-delay="0.1s">
             <div class="about-col">
               <div class="img">
-                <img src="img/new/Alur.png" alt="" class="img-fluid">
+                <img src="img/new/Alur Pengajuan SKU.png" alt="" class="img-fluid">
               </div>
             </div>
           </div>
@@ -223,7 +222,7 @@
               <div class="panel-body">
                 <p align="justify">
                 Silakan melakukan <strong>pendaftaran akun</strong> terlebih dahulu untuk dapat mengajukan <strong>SKU secara online.</strong><br><br>
-                Satu NIK hanya bisa mendaftarkan <strong>satu akun saja.</strong>
+                Harap gunakan <strong>akun yang sama</strong> setiap kali melakukan pengajuan.
               </p>
               </div>
             </div>  
@@ -235,30 +234,30 @@
               <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-4 control-label">Username</label>
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" placeholder="Masukan Username" name="username">
+                  <input type="text" class="form-control" placeholder="Masukkan Username" name="username" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label for="inputPassword3" class="col-sm-4 control-label">Nama Akun</label>
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" placeholder="Masukan Nama" name="nama">
+                  <input type="text" class="form-control" placeholder="Masukkan Nama" name="nama" required>
                 </div>
               </div>
               <div class="form-group row">
                 <label for="inputPassword3" class="col-sm-4 control-label">Password</label>
                 <div class="col-sm-6">
-                  <input type="password" class="form-control " placeholder="Masukan Password" name="password1">
+                  <input type="password" class="form-control " placeholder="Masukkan Password" name="password1" required>
                 </div>
               </div>
               <div class="form-group row">
-                <label for="inputPassword3" class="col-sm-4 control-label">Confirm Password</label>
+                <label for="inputPassword3" class="col-sm-4 control-label">Konfirmasi Password</label>
                 <div class="col-sm-6">
-                  <input type="password" class="form-control " placeholder="Masukan Password Ulang" name="password2">
+                  <input type="password" class="form-control " placeholder="Masukkan Ulang Password" name="password2" required>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-sm-10">
-                  <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                  <button type="submit" class="btn btn-primary btn-lg btn-block">Daftar</button>
                  <!--  <a class="btn btn-success btn-lg btn-block" href="pdfku/examples/print.php">Cetak</a> -->
                 </div>
               </div>
@@ -287,7 +286,7 @@
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
               <h3>Alamat</h3>
-              <address><a href="https://goo.gl/maps/AzDcrKnkYzyXkoMC7" target="_blank">Jl. Paus Raya No. 1 (Karawaci), Tangerang, Banten, Indonesia</a></address>
+              <address><a href="https://goo.gl/maps/rKhWf3cXiXnRSLhy8" target="_blank">Jl. Paus Raya No. 1 Kel. Karawaci Baru Kec. Karawaci, Kota Tangerang, Banten, Indonesia</a></address>
             </div>
           </div>
 
@@ -303,7 +302,7 @@
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:kec.karawaci@tangerangkota.go.id">kel.karawacibaru@tangerangkota.go.id</a></p>
+              <p><a href="mailto:karawacibarukelurahan@gmail.com">karawacibarukelurahan@gmail.com</a></p>
             </div>
           </div>
 

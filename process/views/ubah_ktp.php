@@ -58,8 +58,8 @@
                       <p class="help-block">File dokumen harus bertipe *.jpeg, *.jpg, atau *.png</p>
                     </div>
                     <div class="box-footer">
-                      <button type="button" class="btn btn-default pull-left" data-dismiss="modal" onclick="self.history.back()">Cancel</button>
-                      <button type="submit" class="btn btn-primary pull-right" name="submit">Save changes</button>
+                      <button type="button" class="btn btn-default pull-left" data-dismiss="modal" onclick="self.history.back()">Batal</button>
+                      <button type="submit" class="btn btn-primary pull-right" name="submit">Simpan Perubahan</button>
                     </div>
 
                   </div>

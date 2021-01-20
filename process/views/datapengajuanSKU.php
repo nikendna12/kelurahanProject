@@ -41,38 +41,66 @@
             <div class="panel-body">
               <div class="box"> 
                 <div class="box-body">
-                  <table id="example1" class="table table-bordered table-striped">
+                  <table id="example1" class="table table-bordered table-striped" style="background-color:#F6F6F6;">
                     <thead>
                     <tr>
                       <th>#</th>
                       <th>Nama Lengkap</th>
                       <th>Nama Usaha</th>                      
                       <th>Alamat Usaha</th>                      
+                      <th>Tanggal Mengajukan</th>                      
                       <th>Tanggal Berlaku</th>
-                      <th align="center">Aksi</th>
+                      <th>Alasan Mengajukan SKU</th>
+                      <th width="100">Aksi</th>
+                      <th>Status</th>
                     </tr>
                     </thead>
                     <?php
-                        $sql = mysql_query("SELECT * FROM pengajuan");
+                        $sql = mysql_query("SELECT
+                        A.id_pengajuan, A.username, B.nama_lengkap, A.nama_usaha, A.alamat_usaha, A.tgl_apply, A.masa_berlaku, A.alasan,
+                        A.status_konfirmasi, B.status_verifikasi, C.verifikasi
+                        FROM pengajuan A
+                        JOIN user B
+                        ON A.username = B.username
+                        JOIN dokumen C
+                        ON B.id_user =  C.id_user 
+                        WHERE B.status_verifikasi = 2 and C.verifikasi = 1
+                        ORDER BY B.status_verifikasi ");
                         $no = 1;
                         while($r = mysql_fetch_array($sql)){
                     ?>
                     <tr>
-                      <td><?php echo $no; ?></td>
+                      <td><?php echo $no; echo $r['id_pengajuan'];?></td>
                       <td style="display:none;"><?php echo $r['id_pengajuan']; ?></td>
-                      <td><?php echo $r['username']; ?></td>
+                      <td><?php echo $r['nama_lengkap']; ?></td>
                       <td><?php echo $r['nama_usaha']; ?></td>
                       <td><?php echo $r['alamat_usaha']; ?></td>
+                      <td><?php echo $r['tgl_apply']; ?></td>
                       <td><?php echo $r['masa_berlaku']; ?></td>
-                      
-                      <td align="center">
-                        <div class="btn-group">
-                          <input type="button" class="btn btn-success" name="submit" value="Profil" onclick="window.location='datapengaju_detail.php?tid=<?php echo $r['id_pengajuan'];?>&uname=<?php echo $r['username'];?>' ">
-                          <input type="button" class="btn btn-success" name="submit" value="Dokumen" onclick="window.location='datalolos_detail.php?tid=<?php echo $r['noregis'];?>&tes=<?php echo $n_tes;?>&rpt=<?php echo $n_raport;?>&sert=<?php echo $n_sertifikat;?>' ">
-                          <input type="button" class="btn btn-success" name="submit" value="Konfirmasi" onclick="window.location='datalolos_detail.php?tid=<?php echo $r['noregis'];?>&tes=<?php echo $n_tes;?>&rpt=<?php echo $n_raport;?>&sert=<?php echo $n_sertifikat;?>' ">
+                      <td><?php echo $r['alasan']; ?></td>
+                      <td >
+                          <div class="modal fade" id="modal-yes-<?php echo $r['id_pengajuan'] ?>">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-body">
+                                  <b>Yakin ingin konfirmasi pengajuan SKU ? <?php echo $r['id_pengajuan']; ?></b>
+                                </div>
+                                <div class="modal-footer">
+                                  <input type="submit" class="btn btn-primary" name="submit" value="Ya, Konfirmasi" onclick="window.location='../controller/pengajuanaccept.php?tid=<?php echo $r['id_pengajuan'];?>' ">
+                                  <input type="submit" class="btn btn-default pull-left" value="Close" data-dismiss="modal">
+                                  
+                                </div>
+                              </div>
+                              <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                          </div>                                                            
+                          <button class="btn btn-success" type="button" data-toggle="modal" data-target="#modal-yes-<?php echo $r['id_pengajuan']; ?>">Konfirmasi</button>
                           
-                        </div>
+                          
+                     
                       </td>
+                      <td><?php echo $r['status_konfirmasi'] == 0 ? 'Belum Dikonfirmasi' : 'Sudah Dikonfirmasi' ?></td>
                     </tr>               
                     <?php $no++; } ?>  
                   </table>
